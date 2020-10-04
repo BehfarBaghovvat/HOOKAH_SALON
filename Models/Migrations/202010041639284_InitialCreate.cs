@@ -76,8 +76,10 @@
                         Total_Price = c.String(nullable: false, maxLength: 45),
                         Payment_Amount = c.String(nullable: false, maxLength: 45),
                         Remaining_Amount = c.String(nullable: false, maxLength: 55),
+                        Payment_Type = c.String(nullable: false, maxLength: 15),
                         Order_Date = c.String(nullable: false, maxLength: 25),
                         Register_Date = c.String(nullable: false, maxLength: 10),
+                        Date_Settlement = c.String(nullable: false, maxLength: 25),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -167,7 +169,9 @@
                         Total_Price = c.String(maxLength: 45),
                         Payment_Amount = c.String(maxLength: 45),
                         Remaining_Amount = c.String(maxLength: 55),
+                        Payment_Type = c.String(nullable: false, maxLength: 15),
                         AccountStatus = c.String(nullable: false, maxLength: 50),
+                        Date_Settlement = c.String(nullable: false, maxLength: 25),
                     })
                 .PrimaryKey(t => t.Id)
                 .Index(t => t.Client_ID);
@@ -204,14 +208,14 @@
                         Id = c.Guid(nullable: false),
                         IsActive = c.Boolean(nullable: false),
                         Access_Level = c.String(nullable: false, maxLength: 11),
-                        Username = c.String(nullable: false, maxLength: 35),
-                        Email = c.String(nullable: false, maxLength: 100),
-                        Password = c.String(nullable: false, maxLength: 100),
-                        User_Image = c.Binary(nullable: false),
+                        Username = c.String(maxLength: 35),
+                        Email = c.String(maxLength: 100),
+                        Password = c.String(maxLength: 100),
+                        User_Image = c.Binary(),
                         Description = c.String(maxLength: 3200),
                         First_Name = c.String(maxLength: 20),
                         Last_Name = c.String(maxLength: 25),
-                        Telephone = c.String(nullable: false, maxLength: 11),
+                        Telephone = c.String(maxLength: 11),
                         National_Code = c.String(maxLength: 12),
                         Marital_Status = c.String(maxLength: 5),
                         Address = c.String(maxLength: 500),
@@ -222,18 +226,6 @@
                 .Index(t => t.Username, unique: true)
                 .Index(t => t.Email, unique: true)
                 .Index(t => t.Telephone, unique: true);
-            
-            CreateTable(
-                "dbo.YearLyFinancials",
-                c => new
-                    {
-                        Id = c.Guid(nullable: false),
-                        Sum_Total_Price_Of_Year = c.String(nullable: false, maxLength: 45),
-                        Sum_Payment_Amount_Of_Year = c.String(nullable: false, maxLength: 45),
-                        Sum_Remaining_Amount_Of_Year = c.String(nullable: false, maxLength: 55),
-                        Year = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id);
             
         }
         
@@ -250,7 +242,6 @@
             DropIndex("dbo.Hookahs", new[] { "HookahName" });
             DropIndex("dbo.Foods", new[] { "FoodName" });
             DropIndex("dbo.Drinks", new[] { "DrinkName" });
-            DropTable("dbo.YearLyFinancials");
             DropTable("dbo.Users");
             DropTable("dbo.TemporaryClientStatus");
             DropTable("dbo.TemporaryClients");

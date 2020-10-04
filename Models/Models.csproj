@@ -63,9 +63,9 @@
     <Compile Include="EventLog.cs" />
     <Compile Include="Financial.cs" />
     <Compile Include="DailyFinancial.cs" />
-    <Compile Include="Migrations\202009181629129_InitialCreate.cs" />
-    <Compile Include="Migrations\202009181629129_InitialCreate.designer.cs">
-      <DependentUpon>202009181629129_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202010041639284_InitialCreate.cs" />
+    <Compile Include="Migrations\202010041639284_InitialCreate.designer.cs">
+      <DependentUpon>202010041639284_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PermanentClient.cs" />
@@ -91,12 +91,12 @@
     <Content Include="Documents\Readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202009181629129_InitialCreate.resx">
-      <DependentUpon>202009181629129_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Properties\DataSources\" />
+    <EmbeddedResource Include="Migrations\202010041639284_InitialCreate.resx">
+      <DependentUpon>202010041639284_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
