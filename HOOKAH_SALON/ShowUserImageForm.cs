@@ -7,6 +7,7 @@
 			InitializeComponent();
 		}
 
+		#region ShowUserImageForm_Load
 		private void ShowUserImageForm_Load(object sender, System.EventArgs e)
 		{
 			var image = Program.AuthenticatedUser.User_Image;
@@ -17,14 +18,13 @@
 			}
 		}
 
-		private void ShowUserImageForm_MouseDoubleClick(object sender, System.Windows.Forms.MouseEventArgs e)
-		{
-			this.Close();
-		}
+		#endregion /ShowUserImageForm_Load
 
-		private void UserImagePicturBox_MouseDoubleClick(object sender, System.Windows.Forms.MouseEventArgs e)
+		#region CloseButton_Click
+		private void CloseButton_Click(object sender, System.EventArgs e)
 		{
 			this.Close();
 		}
+		#endregion /CloseButton_Click
 	}
 }

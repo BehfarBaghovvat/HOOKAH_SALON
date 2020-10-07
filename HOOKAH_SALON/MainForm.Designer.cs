@@ -78,10 +78,6 @@
 			this.menuReportBunifuGradientPanelBunifuElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
 			this.sideMenuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
 			this.mainPanel = new Mbb.Windows.Forms.Panel();
-			this.reportPanel = new Mbb.Windows.Forms.Panel();
-			this.showSelectReportPanel = new Mbb.Windows.Forms.Panel();
-			this.settingPanel = new Mbb.Windows.Forms.Panel();
-			this.selectSettingPanel = new Mbb.Windows.Forms.Panel();
 			this.orderPanel = new Mbb.Windows.Forms.Panel();
 			this.registerOrderPanel = new Mbb.Windows.Forms.Panel();
 			this.paymentTypeGroupBox = new Mbb.Windows.Forms.GroupBox();
@@ -137,6 +133,10 @@
 			this.drinkNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.drinkPriceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.drinkBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.reportPanel = new Mbb.Windows.Forms.Panel();
+			this.showSelectReportPanel = new Mbb.Windows.Forms.Panel();
+			this.settingPanel = new Mbb.Windows.Forms.Panel();
+			this.selectSettingPanel = new Mbb.Windows.Forms.Panel();
 			this.storePanel = new Mbb.Windows.Forms.Panel();
 			this.menuStorePanel = new Mbb.Windows.Forms.Panel();
 			this.foodAddButton = new Mbb.Windows.Forms.Button();
@@ -232,8 +232,6 @@
 			this.menuReportBunifuGradientPanel.SuspendLayout();
 			this.menuSettingBunifuGradientPanel.SuspendLayout();
 			this.mainPanel.SuspendLayout();
-			this.reportPanel.SuspendLayout();
-			this.settingPanel.SuspendLayout();
 			this.orderPanel.SuspendLayout();
 			this.registerOrderPanel.SuspendLayout();
 			this.paymentTypeGroupBox.SuspendLayout();
@@ -247,6 +245,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.hookahBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.drinkStoreDataGridView)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.drinkBindingSource)).BeginInit();
+			this.reportPanel.SuspendLayout();
+			this.settingPanel.SuspendLayout();
 			this.storePanel.SuspendLayout();
 			this.menuStorePanel.SuspendLayout();
 			this.hookahPanel.SuspendLayout();
@@ -829,73 +829,6 @@
 			this.mainPanel.Size = new System.Drawing.Size(1050, 590);
 			this.mainPanel.TabIndex = 24;
 			this.mainPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainPanel_MouseDown);
-			// 
-			// reportPanel
-			// 
-			this.reportPanel.BackColor = System.Drawing.Color.DarkSlateBlue;
-			this.reportPanel.Controls.Add(this.showSelectReportPanel);
-			this.reportPanel.Controls.Add(this.menuReportBunifuGradientPanel);
-			this.showSelectReportPanelTransition.SetDecoration(this.reportPanel, BunifuAnimatorNS.DecorationType.None);
-			this.financialStatusBunifuTransition.SetDecoration(this.reportPanel, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition1.SetDecoration(this.reportPanel, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition2.SetDecoration(this.reportPanel, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.reportPanel, BunifuAnimatorNS.DecorationType.None);
-			this.sideMenuTransition1.SetDecoration(this.reportPanel, BunifuAnimatorNS.DecorationType.None);
-			this.sideMenuTransition2.SetDecoration(this.reportPanel, BunifuAnimatorNS.DecorationType.None);
-			this.reportPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.reportPanel.Location = new System.Drawing.Point(0, 0);
-			this.reportPanel.Name = "reportPanel";
-			this.reportPanel.Size = new System.Drawing.Size(1050, 590);
-			this.reportPanel.TabIndex = 6;
-			// 
-			// showSelectReportPanel
-			// 
-			this.showSelectReportPanel.BackColor = System.Drawing.Color.SlateBlue;
-			this.showSelectReportPanelTransition.SetDecoration(this.showSelectReportPanel, BunifuAnimatorNS.DecorationType.None);
-			this.financialStatusBunifuTransition.SetDecoration(this.showSelectReportPanel, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition1.SetDecoration(this.showSelectReportPanel, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition2.SetDecoration(this.showSelectReportPanel, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.showSelectReportPanel, BunifuAnimatorNS.DecorationType.None);
-			this.sideMenuTransition1.SetDecoration(this.showSelectReportPanel, BunifuAnimatorNS.DecorationType.None);
-			this.sideMenuTransition2.SetDecoration(this.showSelectReportPanel, BunifuAnimatorNS.DecorationType.None);
-			this.showSelectReportPanel.Dock = System.Windows.Forms.DockStyle.Left;
-			this.showSelectReportPanel.Location = new System.Drawing.Point(0, 0);
-			this.showSelectReportPanel.Name = "showSelectReportPanel";
-			this.showSelectReportPanel.Size = new System.Drawing.Size(910, 590);
-			this.showSelectReportPanel.TabIndex = 1;
-			// 
-			// settingPanel
-			// 
-			this.settingPanel.BackColor = System.Drawing.Color.Silver;
-			this.settingPanel.Controls.Add(this.selectSettingPanel);
-			this.settingPanel.Controls.Add(this.menuSettingBunifuGradientPanel);
-			this.showSelectReportPanelTransition.SetDecoration(this.settingPanel, BunifuAnimatorNS.DecorationType.None);
-			this.financialStatusBunifuTransition.SetDecoration(this.settingPanel, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition1.SetDecoration(this.settingPanel, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition2.SetDecoration(this.settingPanel, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.settingPanel, BunifuAnimatorNS.DecorationType.None);
-			this.sideMenuTransition1.SetDecoration(this.settingPanel, BunifuAnimatorNS.DecorationType.None);
-			this.sideMenuTransition2.SetDecoration(this.settingPanel, BunifuAnimatorNS.DecorationType.None);
-			this.settingPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.settingPanel.Location = new System.Drawing.Point(0, 0);
-			this.settingPanel.Name = "settingPanel";
-			this.settingPanel.Size = new System.Drawing.Size(1050, 590);
-			this.settingPanel.TabIndex = 0;
-			// 
-			// selectSettingPanel
-			// 
-			this.showSelectReportPanelTransition.SetDecoration(this.selectSettingPanel, BunifuAnimatorNS.DecorationType.None);
-			this.financialStatusBunifuTransition.SetDecoration(this.selectSettingPanel, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition1.SetDecoration(this.selectSettingPanel, BunifuAnimatorNS.DecorationType.None);
-			this.showPageTransition2.SetDecoration(this.selectSettingPanel, BunifuAnimatorNS.DecorationType.None);
-			this.menuTransition2.SetDecoration(this.selectSettingPanel, BunifuAnimatorNS.DecorationType.None);
-			this.sideMenuTransition1.SetDecoration(this.selectSettingPanel, BunifuAnimatorNS.DecorationType.None);
-			this.sideMenuTransition2.SetDecoration(this.selectSettingPanel, BunifuAnimatorNS.DecorationType.None);
-			this.selectSettingPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.selectSettingPanel.Location = new System.Drawing.Point(0, 105);
-			this.selectSettingPanel.Name = "selectSettingPanel";
-			this.selectSettingPanel.Size = new System.Drawing.Size(1050, 485);
-			this.selectSettingPanel.TabIndex = 3;
 			// 
 			// orderPanel
 			// 
@@ -2005,6 +1938,73 @@
 			// drinkBindingSource
 			// 
 			this.drinkBindingSource.DataSource = typeof(Models.Drink);
+			// 
+			// reportPanel
+			// 
+			this.reportPanel.BackColor = System.Drawing.Color.DarkSlateBlue;
+			this.reportPanel.Controls.Add(this.showSelectReportPanel);
+			this.reportPanel.Controls.Add(this.menuReportBunifuGradientPanel);
+			this.showSelectReportPanelTransition.SetDecoration(this.reportPanel, BunifuAnimatorNS.DecorationType.None);
+			this.financialStatusBunifuTransition.SetDecoration(this.reportPanel, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition1.SetDecoration(this.reportPanel, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition2.SetDecoration(this.reportPanel, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.reportPanel, BunifuAnimatorNS.DecorationType.None);
+			this.sideMenuTransition1.SetDecoration(this.reportPanel, BunifuAnimatorNS.DecorationType.None);
+			this.sideMenuTransition2.SetDecoration(this.reportPanel, BunifuAnimatorNS.DecorationType.None);
+			this.reportPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.reportPanel.Location = new System.Drawing.Point(0, 0);
+			this.reportPanel.Name = "reportPanel";
+			this.reportPanel.Size = new System.Drawing.Size(1050, 590);
+			this.reportPanel.TabIndex = 6;
+			// 
+			// showSelectReportPanel
+			// 
+			this.showSelectReportPanel.BackColor = System.Drawing.Color.SlateBlue;
+			this.showSelectReportPanelTransition.SetDecoration(this.showSelectReportPanel, BunifuAnimatorNS.DecorationType.None);
+			this.financialStatusBunifuTransition.SetDecoration(this.showSelectReportPanel, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition1.SetDecoration(this.showSelectReportPanel, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition2.SetDecoration(this.showSelectReportPanel, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.showSelectReportPanel, BunifuAnimatorNS.DecorationType.None);
+			this.sideMenuTransition1.SetDecoration(this.showSelectReportPanel, BunifuAnimatorNS.DecorationType.None);
+			this.sideMenuTransition2.SetDecoration(this.showSelectReportPanel, BunifuAnimatorNS.DecorationType.None);
+			this.showSelectReportPanel.Dock = System.Windows.Forms.DockStyle.Left;
+			this.showSelectReportPanel.Location = new System.Drawing.Point(0, 0);
+			this.showSelectReportPanel.Name = "showSelectReportPanel";
+			this.showSelectReportPanel.Size = new System.Drawing.Size(910, 590);
+			this.showSelectReportPanel.TabIndex = 1;
+			// 
+			// settingPanel
+			// 
+			this.settingPanel.BackColor = System.Drawing.Color.Silver;
+			this.settingPanel.Controls.Add(this.selectSettingPanel);
+			this.settingPanel.Controls.Add(this.menuSettingBunifuGradientPanel);
+			this.showSelectReportPanelTransition.SetDecoration(this.settingPanel, BunifuAnimatorNS.DecorationType.None);
+			this.financialStatusBunifuTransition.SetDecoration(this.settingPanel, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition1.SetDecoration(this.settingPanel, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition2.SetDecoration(this.settingPanel, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.settingPanel, BunifuAnimatorNS.DecorationType.None);
+			this.sideMenuTransition1.SetDecoration(this.settingPanel, BunifuAnimatorNS.DecorationType.None);
+			this.sideMenuTransition2.SetDecoration(this.settingPanel, BunifuAnimatorNS.DecorationType.None);
+			this.settingPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.settingPanel.Location = new System.Drawing.Point(0, 0);
+			this.settingPanel.Name = "settingPanel";
+			this.settingPanel.Size = new System.Drawing.Size(1050, 590);
+			this.settingPanel.TabIndex = 0;
+			// 
+			// selectSettingPanel
+			// 
+			this.showSelectReportPanelTransition.SetDecoration(this.selectSettingPanel, BunifuAnimatorNS.DecorationType.None);
+			this.financialStatusBunifuTransition.SetDecoration(this.selectSettingPanel, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition1.SetDecoration(this.selectSettingPanel, BunifuAnimatorNS.DecorationType.None);
+			this.showPageTransition2.SetDecoration(this.selectSettingPanel, BunifuAnimatorNS.DecorationType.None);
+			this.menuTransition2.SetDecoration(this.selectSettingPanel, BunifuAnimatorNS.DecorationType.None);
+			this.sideMenuTransition1.SetDecoration(this.selectSettingPanel, BunifuAnimatorNS.DecorationType.None);
+			this.sideMenuTransition2.SetDecoration(this.selectSettingPanel, BunifuAnimatorNS.DecorationType.None);
+			this.selectSettingPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.selectSettingPanel.Location = new System.Drawing.Point(0, 105);
+			this.selectSettingPanel.Name = "selectSettingPanel";
+			this.selectSettingPanel.Size = new System.Drawing.Size(1050, 485);
+			this.selectSettingPanel.TabIndex = 3;
 			// 
 			// storePanel
 			// 
@@ -3567,8 +3567,6 @@
 			this.menuReportBunifuGradientPanel.ResumeLayout(false);
 			this.menuSettingBunifuGradientPanel.ResumeLayout(false);
 			this.mainPanel.ResumeLayout(false);
-			this.reportPanel.ResumeLayout(false);
-			this.settingPanel.ResumeLayout(false);
 			this.orderPanel.ResumeLayout(false);
 			this.registerOrderPanel.ResumeLayout(false);
 			this.registerOrderPanel.PerformLayout();
@@ -3587,6 +3585,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.hookahBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.drinkStoreDataGridView)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.drinkBindingSource)).EndInit();
+			this.reportPanel.ResumeLayout(false);
+			this.settingPanel.ResumeLayout(false);
 			this.storePanel.ResumeLayout(false);
 			this.menuStorePanel.ResumeLayout(false);
 			this.hookahPanel.ResumeLayout(false);

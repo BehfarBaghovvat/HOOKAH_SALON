@@ -32,6 +32,7 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowUserImageForm));
 			this.showUserImageFormBunifuElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
 			this.userImagePicturBox = new Mbb.Windows.Forms.CircularPictureBox();
+			this.closeButton = new Mbb.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.userImagePicturBox)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -53,7 +54,22 @@
 			this.userImagePicturBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.userImagePicturBox.TabIndex = 0;
 			this.userImagePicturBox.TabStop = false;
-			this.userImagePicturBox.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.UserImagePicturBox_MouseDoubleClick);
+			// 
+			// closeButton
+			// 
+			this.closeButton.BackColor = System.Drawing.Color.Firebrick;
+			this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
+			this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.closeButton.FlatAppearance.BorderSize = 0;
+			this.closeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+			this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.closeButton.Location = new System.Drawing.Point(373, 12);
+			this.closeButton.Name = "closeButton";
+			this.closeButton.Size = new System.Drawing.Size(20, 20);
+			this.closeButton.TabIndex = 1;
+			this.closeButton.UseVisualStyleBackColor = false;
+			this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
 			// 
 			// ShowUserImageForm
 			// 
@@ -62,6 +78,7 @@
 			this.BackColor = System.Drawing.Color.Gray;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(400, 400);
+			this.Controls.Add(this.closeButton);
 			this.Controls.Add(this.userImagePicturBox);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MaximumSize = new System.Drawing.Size(400, 400);
@@ -69,7 +86,6 @@
 			this.Name = "ShowUserImageForm";
 			this.Text = "ShowUserImageForm";
 			this.Load += new System.EventHandler(this.ShowUserImageForm_Load);
-			this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ShowUserImageForm_MouseDoubleClick);
 			((System.ComponentModel.ISupportInitialize)(this.userImagePicturBox)).EndInit();
 			this.ResumeLayout(false);
 
@@ -78,5 +94,6 @@
 		#endregion
 		private Bunifu.Framework.UI.BunifuElipse showUserImageFormBunifuElipse;
 		private Mbb.Windows.Forms.CircularPictureBox userImagePicturBox;
+		private Mbb.Windows.Forms.Button closeButton;
 	}
 }

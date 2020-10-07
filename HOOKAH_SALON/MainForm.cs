@@ -385,7 +385,7 @@ namespace HOOKAH_SALON
 		private void UserImagePicturBox_MouseDoubleClick(object sender, MouseEventArgs e)
 		{
 			ShowUserImageForm showUserImageForm = new ShowUserImageForm();
-			showUserImageForm.Show();
+			showUserImageForm.ShowDialog();
 		}
 		#endregion /UserImagePicturBox_MouseDoubleClick
 
