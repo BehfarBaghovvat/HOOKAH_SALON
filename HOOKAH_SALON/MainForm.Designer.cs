@@ -3233,7 +3233,7 @@
 			this.financialStatusBunifuTransition.SetDecoration(this.loginTitleLabel, BunifuAnimatorNS.DecorationType.None);
 			this.menuTransition2.SetDecoration(this.loginTitleLabel, BunifuAnimatorNS.DecorationType.None);
 			this.loginTitleLabel.ForeColor = System.Drawing.Color.White;
-			this.loginTitleLabel.Location = new System.Drawing.Point(1191, 7);
+			this.loginTitleLabel.Location = new System.Drawing.Point(1237, 7);
 			this.loginTitleLabel.Name = "loginTitleLabel";
 			this.loginTitleLabel.Size = new System.Drawing.Size(27, 17);
 			this.loginTitleLabel.TabIndex = 12;
